@@ -11,10 +11,11 @@ contract ContractTest is Test {
     SplitMain splitter;
 
     function setUp() public {
-        // Set up the contract
-        mainContract = new Contract();
         // Set up the splitter 
         splitter = new SplitMain();
+        // Set up the contract
+        mainContract = new Contract(splitter);
+        
     }
 
     /// @dev helper for other tests

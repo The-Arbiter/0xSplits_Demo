@@ -27,6 +27,10 @@ interface SplitsETHDistributor {
 contract Contract{
 
     SplitMain splitter;
+
+    constructor(SplitMain _splitMain){
+        splitter = _splitMain;
+    }
      
 
     /// @notice Calls distributeETH
